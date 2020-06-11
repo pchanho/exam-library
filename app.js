@@ -7,6 +7,7 @@ const express = require('express');
 const bodyParser = require("body-parser");
 
 const app = express();
+require('./models');
 const authorRouter = require('./routes/authorRouter');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

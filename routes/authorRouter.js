@@ -13,7 +13,7 @@ const authorController = require('../controllers/authorController');
 authorRouter.get('/', authorController.getAllAuthors);
 authorRouter.get('/:id', authorController.getAuthorById);
 authorRouter.post('/create', authorController.addAuthor);
-authorRouter.post('/update', authorController.updateAuthor);
+// authorRouter.post('/update', authorController.updateAuthor);
 
 
 module.exports = authorRouter;
