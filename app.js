@@ -19,6 +19,16 @@ app.get('/', function(req, res){
 // Handle author-management requests
 app.use('/author-management', authorRouter);
 
-app.listen(3000, function(){
-    console.log('The library app is listening on port 3000!')
+// Before Heroku
+// app.listen(3000, function(){
+//     console.log('The library app is listening on port 3000!')
+// });
+
+// Heroku
+// Heroku assigns a dynamic port number to your app
+// That's what this changes happen
+// This will allow the app to listen to your port number
+// as well as the port number declared in the environment variables using Heroku.
+app.listen(process.env.PORT || 3000, () =>{
+   console.log("The library app is running!")
 });
